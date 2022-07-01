@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Containers/Home/Home';
+import Twitter from './Containers/Twitter/Twitter';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Twitter />} />
         </Routes>
       </BrowserRouter>
     </div>
