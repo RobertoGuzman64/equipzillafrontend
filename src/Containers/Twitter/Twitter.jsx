@@ -17,8 +17,8 @@ const Twitter = () => {
 
     const traerTweets = async () => {
         try {
-            let resultado = await axios.get(`${baseURL}/comunidades`);
-            setComunidades(resultado.data);
+            let resultado = await axios.get(`${baseURL}twitter`);
+            setTweets(resultado.data);
             console.log(resultado.data)
         } catch (error) {
             setMsgError(error);
@@ -28,7 +28,24 @@ const Twitter = () => {
     return (
         <div className='paginaTwitter'>
             <div className='contenidoTwitter'>
-                <h1>Bienvenido a la aplicación de Tweets</h1>
+                {
+                    tweets.map((tweet, index) => {
+                        return (
+                            <div className='tweet' key={index}>
+                                <div className='tweet-header'>
+                                    <img src={tweet.user.profile_image_url} alt='profile' />
+                                    <div className='tweet-header-info'>
+                                        <h3>{tweet.user.name}</h3>
+                                        <p>@{tweet.user.screen_name}</p>
+                                    </div>
+                                </div>
+                                <p className='tweet-text'>{tweet.text}</p>
+                                {msgError}
+                            </div>
+                        )
+                    }
+                    )
+                }
             </div>
         </div>
     )
