@@ -14,3 +14,13 @@
     height: 100%;
     width: 100%;
 }
+
+.tag-cloud-item{
+    cursor: pointer;
+}
+
+.tag-cloud-item:hover{
+    scale: 1.1;
+    height: 5em;
+    width: 5em;
+}
