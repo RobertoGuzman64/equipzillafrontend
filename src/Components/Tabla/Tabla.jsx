@@ -20,7 +20,6 @@ const Tabla = () => {
         try {
             let resultado = await axios.get(`${baseURL}twitter`);
             setTweets(resultado.data);
-            console.log(resultado.data)
         } catch (error) {
             setMsgError(error);
         }

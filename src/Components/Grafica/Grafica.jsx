@@ -13,6 +13,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
+
 const Grafica = () => {
     const [tweets, setTweets] = useState([]);
     const [msgError, setMsgError] = useState('');
@@ -23,10 +24,10 @@ const Grafica = () => {
 
     useEffect(() => {
         tweets.map(tweet => {
-            favourite_count.push(tweet.favorite_count);
+            friends_count.push(tweet.friends_count);
             retweet_count.push(tweet.retweet_count);
         });
-        console.log('FAVORITOS',favourite_count,'RETWEETS', retweet_count);
+        console.log(friends_count,'RETWEETS', retweet_count);
     }, [tweets]);
 
     const traerTweets = async () => {
@@ -53,7 +54,7 @@ const Grafica = () => {
         scales: {
             y: {
                 min: 0,
-                max: 50,
+                max: 100,
             },
         },
         plugins: {
@@ -68,15 +69,16 @@ const Grafica = () => {
     };
 
     const labels = [''];
-    var favourite_count = [];
+
+    var friends_count = [];
     var retweet_count = [];
 
-    const data2 = {
+    const data = {
         labels,
         datasets: [
             {
                 label: 'Favourite Count',
-                data: favourite_count,
+                data: friends_count,
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
             {
@@ -89,8 +91,8 @@ const Grafica = () => {
 
     return (
         <div className='componenteGrafica'>
-                <Bar options={options} data={data2} />
-                {msgError}
+            <Bar options={options} data={data} />
+            {msgError}
         </div>
     );
 }
