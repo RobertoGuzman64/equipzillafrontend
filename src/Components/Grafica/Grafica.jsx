@@ -6,12 +6,14 @@ import {
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
-    BarElement,
+    PointElement,
+    LineElement,
     Title,
     Tooltip,
+    Filler,
     Legend,
 } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 
 const Grafica = () => {
@@ -43,18 +45,24 @@ const Grafica = () => {
     ChartJS.register(
         CategoryScale,
         LinearScale,
-        BarElement,
+        PointElement,
+        LineElement,
         Title,
         Tooltip,
+        Filler,
         Legend
     );
 
     const options = {
         responsive: true,
+        animations: {
+            duration: 5,
+            easing: 'easeInOutQuart',
+        },
         scales: {
             y: {
-                min: 0,
-                max: 100,
+                min: 500,
+                max: 3500,
             },
         },
         plugins: {
@@ -68,7 +76,8 @@ const Grafica = () => {
         },
     };
 
-    const labels = [''];
+    // const labels = [''];
+    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
     var friends_count = [];
     var retweet_count = [];
@@ -77,13 +86,10 @@ const Grafica = () => {
         labels,
         datasets: [
             {
-                label: 'Favourite Count',
-                data: friends_count,
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            },
-            {
+                fill: true,
                 label: 'Retweet Count',
                 data: retweet_count,
+                borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 0.5)',
             },
         ],
@@ -91,7 +97,7 @@ const Grafica = () => {
 
     return (
         <div className='componenteGrafica'>
-            <Bar options={options} data={data} />
+            <Line options={options} data={data} />
             {msgError}
         </div>
     );
