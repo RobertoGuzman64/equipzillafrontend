@@ -48,7 +48,7 @@ const NubeTags = () => {
 
     return (
         <div className='componenteNubeTags'>
-            <TagCloud tags={data} minSize={5} maxSize={10} renderer={customRenderer(data)} />
+            <TagCloud tags={data} minSize={10} maxSize={20} renderer={customRenderer(data)} />
             {msgError}
         </div>
     );

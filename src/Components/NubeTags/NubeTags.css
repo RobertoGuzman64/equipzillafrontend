@@ -1,9 +1,9 @@
 .tag-cloud{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 50em;
+    height: 30em;
     width: 50em;
 }
 
@@ -12,6 +12,6 @@
 }
 
 .tag-cloud-tag:hover{
-    transform: scale(0.4);
+    transform: scale(1.3);
     margin: 10%;
 }
