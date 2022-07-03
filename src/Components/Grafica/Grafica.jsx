@@ -62,7 +62,7 @@ const Grafica = () => {
             },
             title: {
                 display: true,
-                text: tweets.lenght,
+                text: 'Tweets',
             },
         },
     };

@@ -1,6 +1,6 @@
 .paginaTwitter {
     background: linear-gradient(90deg, rgba(74,74,107,1) 18%, rgba(69,68,68,1) 43%, rgba(70,67,67,1) 61%, rgba(97,90,90,1) 80%);
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,17 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #34393e;
+    background-color: #171515;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-}
-
-.tag-cloud-item{
-    cursor: pointer;
-}
-
-.tag-cloud-item:hover{
-    scale: 1.1;
-    height: 5em;
-    width: 5em;
 }
