@@ -1,8 +1,22 @@
 .componenteGrafica {
+    margin-top: 5em;
+    background-color: rgba(60, 60, 73, 0.16);
+    height: 50em;
+    width: 100em;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background-color: #4d4d4d;
+    align-items: center;
+    color: black;
+    margin-block-end: 3em;
+}
+
+.grafica{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
 }

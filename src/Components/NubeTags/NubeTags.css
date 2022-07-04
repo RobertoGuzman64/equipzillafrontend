@@ -1,3 +1,13 @@
+.componenteNubeTags{
+    background-color: #9f9f9f;
+    height: 30em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
 .tag-cloud{
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +22,6 @@
 }
 
 .tag-cloud-tag:hover{
-    transform: scale(1.3);
+    transform: scale(1.9);
     margin: 10%;
 }

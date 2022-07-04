@@ -55,10 +55,7 @@ const Grafica = () => {
 
     const options = {
         responsive: true,
-        animations: {
-            duration: 5,
-            easing: 'easeInOutQuart',
-        },
+        animations: false,
         scales: {
             y: {
                 min: 500,
@@ -89,16 +86,21 @@ const Grafica = () => {
                 fill: true,
                 label: 'Retweet Count',
                 data: retweet_count,
-                borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                tension: 0.3,
+                borderColor: 'rgb(91, 209, 215)',
+                backgroundColor: 'rgba(91, 209, 215, 0.3)',
+                pointRadius: 8,
+                pointBackgroundColor: 'rgb(91, 209, 215)',
             },
         ],
     };
 
     return (
         <div className='componenteGrafica'>
-            <Line options={options} data={data} />
-            {msgError}
+            <div className='grafica'>
+                <Line options={options} data={data} />
+                {msgError}
+            </div>
         </div>
     );
 }
