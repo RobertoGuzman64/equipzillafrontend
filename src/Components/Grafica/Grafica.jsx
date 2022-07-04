@@ -26,17 +26,16 @@ const Grafica = () => {
 
     useEffect(() => {
         tweets.map(tweet => {
-            friends_count.push(tweet.friends_count);
-            retweet_count.push(tweet.retweet_count);
+            followers_count.push(tweet.user.followers_count);
+            friends_count.push(tweet.user.friends_count);
+            user_name.push(tweet.user.name);
         });
-        // console.log(friends_count,'RETWEETS', retweet_count);
     }, [tweets]);
 
     const traerTweets = async () => {
         try {
             let resultado = await axios.get(`${baseURL}twitter`);
             setTweets(resultado.data);
-            // console.log(resultado.data)
         } catch (error) {
             setMsgError(error);
         }
@@ -55,11 +54,10 @@ const Grafica = () => {
 
     const options = {
         responsive: true,
-        animations: false,
         scales: {
             y: {
-                min: 500,
-                max: 3500,
+                min: 0,
+                max: 5500,
             },
         },
         plugins: {
@@ -68,29 +66,40 @@ const Grafica = () => {
             },
             title: {
                 display: true,
-                text: 'Tweets',
+                text: 'Cantidad de amigos que tiene cada Usuario que twittea',
             },
         },
     };
 
-    // const labels = [''];
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
+    var followers_count = [];
     var friends_count = [];
-    var retweet_count = [];
+    var user_name = [];
+
+    const labels = user_name;
 
     const data = {
         labels,
         datasets: [
             {
                 fill: true,
-                label: 'Retweet Count',
-                data: retweet_count,
+                label: 'Cantidad de Amigos',
+                data: friends_count,
                 tension: 0.3,
                 borderColor: 'rgb(91, 209, 215)',
                 backgroundColor: 'rgba(91, 209, 215, 0.3)',
-                pointRadius: 8,
+                pointRadius: 4,
                 pointBackgroundColor: 'rgb(91, 209, 215)',
+            },
+            {
+                fill: true,
+                label: 'Cantidad de Seguidores',
+                data: followers_count,
+                tension: 0.3,
+                borderColor: 'rgb(141, 199, 128)',
+                backgroundColor: 'rgba(141, 199, 128, 0.604)',
+                pointRadius: 4,
+                pointBackgroundColor: 'rgb(141, 199, 128)',
             },
         ],
     };

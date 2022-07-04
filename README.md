@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Prueba Técnica API Frontend para Equipzilla
+***
+![Equipzilla](./img/logo-equizilla.png)
+***
+## Repositorio en el que se a estado trabajando el proyecto. 
+## https://github.com/RobertoGuzman64/equipzillafrontend.git
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## La aplicación se encuentra desplegada en AWS en el siguiente enlace: [https://master.dsuwckp3iftx9.amplifyapp.com/ ](https://master.d1tynjpf3j12n1.amplifyapp.com/)
+<br>
 
-## Available Scripts
+## Pre-requisitos del proyecto para hacerlo funcionar en tu equipo local:
 
-In the project directory, you can run:
+* Instalar **Nodejs** en nuestro equipo, descargándolo de su página oficial
+https://nodejs.org/
 
-### `npm start`
+* Clonar el proyecto en nuestro equipo con git bash:
+```
+git clone 'url-del-repositorio'
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Instalar todas las dependecias con el siguiente comando:
+```
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Arrancamos el servidor con el siguiente comando:
+```
+npm start
+```
 
-### `npm test`
+## Tecnologías utilizadas en el proyecto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **react**: Instalamos react en nuestro proyecto:
+```
+npm install react
+```
+* **react-router-dom**: Instalamos react-router-dom en nuestro proyecto, para poder alternar entre vistas en nuestra aplicación:
+```
+npm install react-router-dom
+```
+* **axios**: Instalamos axios en nuestro proyecto, para poder hacer consultas a la API:
+```
+npm install axios
+```
+* **react-boostrap**: Instalamos react-boostrap en nuestro proyecto (Librería de componentes de Boostrap):
+```
+npm install react-boostrap
+```
+* **react-chartjs-2**: Instalamos react-chartjs-2 en nuestro proyecto (Librería de componentes de Chart.js):
+```
+npm install react-chartjs-2
+```
+* **react-tagcloud**: Instalamos react-tagcloud en nuestro proyecto (Librería de componentes de Tagcloud):
+```
+npm install react-tagcloud
+```
+***
+![React-TagCloud](./img/reacttagcloud.png)
+***
+***
+![React-Boostrap](./img/reactboostrap.png)
+***
+***
+![React-Chart.js](./img/reactchart.png)
+***
 
-### `npm run build`
+## Explicación de la estructura del proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El directorio **src** es donde está almacenada toda la aplicación. En este directorio se encuentra lo siguiente:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **index.js**: Este es el archivo principal. Desde aquí se llama a **<App/>**, que es donde se ejecutará toda la aplicación.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **app.js**: En este archivo es donde se gestionan los diferentes **Containers** de la aplicación (vistas).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Containers**: En este directorio es donde se guardarán las diferentes vistas:
+    * **Twitter**: En esta vista tenemos la primera toma de contacto con la aplicación en donde se encuentran la tabla, la nube de tags y la gráfica de tweets.
+* **Components**: En este directorio es donde se guardan todos los componentes que se usarán en todas las vistas:
+    * **Grafica**: En este componente se encuentra la gráfica de cantidad de amigos y seguidores de los usuarios de los tweets.
+    * **NubeTags**: En este componente se encuentra la nube de tags de los tweets de la aplicación.
+    * **Tabla**: En este componente se muestran los datos de los tweets de la aplicación.
+* **img**: En este directorio se guardan todas las imágenes que se usan para la aplicación y para el readme.
+***
+![React AWS](./img/reactAWS.png)
+***

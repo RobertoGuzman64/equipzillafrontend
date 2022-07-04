@@ -13,7 +13,6 @@ const Twitter = () => {
                 <Tabla />
                 <NubeTags />
                 <Grafica />
-                <Grafica />
             </div>
         </div>
     );
