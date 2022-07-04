@@ -1,14 +1,16 @@
 .tabla{
-    background: linear-gradient(90deg, rgba(74,74,107,1) 18%, rgba(69,68,68,1) 43%, rgba(70,67,67,1) 61%, rgba(97,90,90,1) 80%);
-    width: 100%;
+    background-color: #9f9f9f;
     height: 50em;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5em;
+    /* overflow-y: scroll; */
 }
 
-.contenidoTabla{
+/* .contenidoTabla{
     width: 80em;
     height: 50em;
     overflow-y: scroll;
@@ -18,10 +20,9 @@
     width: 77em;
     height: 20em;
     color: aliceblue;
-    background-color: #171515;
+    background-color: #9f9f9f;
     border-radius: 5px;
     box-shadow: 0 0 5px #000;
     margin: 0 auto;
     padding: 10px;
     /* position: relative; */
-}

@@ -29,14 +29,14 @@ const Grafica = () => {
             friends_count.push(tweet.friends_count);
             retweet_count.push(tweet.retweet_count);
         });
-        console.log(friends_count,'RETWEETS', retweet_count);
+        // console.log(friends_count,'RETWEETS', retweet_count);
     }, [tweets]);
 
     const traerTweets = async () => {
         try {
             let resultado = await axios.get(`${baseURL}twitter`);
             setTweets(resultado.data);
-            console.log(resultado.data)
+            // console.log(resultado.data)
         } catch (error) {
             setMsgError(error);
         }
