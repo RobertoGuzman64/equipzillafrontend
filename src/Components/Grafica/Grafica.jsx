@@ -66,7 +66,7 @@ const Grafica = () => {
             },
             title: {
                 display: true,
-                text: 'Cantidad de amigos que tiene cada Usuario que twittea',
+                text: 'Gráfica de Usuarios',
             },
         },
     };
@@ -83,7 +83,7 @@ const Grafica = () => {
         datasets: [
             {
                 fill: true,
-                label: 'Cantidad de Amigos',
+                label: 'Número de Amigos',
                 data: friends_count,
                 tension: 0.3,
                 borderColor: 'rgb(91, 209, 215)',
@@ -93,7 +93,7 @@ const Grafica = () => {
             },
             {
                 fill: true,
-                label: 'Cantidad de Seguidores',
+                label: 'Número de Seguidores',
                 data: followers_count,
                 tension: 0.3,
                 borderColor: 'rgb(141, 199, 128)',

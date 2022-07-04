@@ -75,8 +75,8 @@ El directorio **src** es donde está almacenada toda la aplicación. En este dir
 * **Containers**: En este directorio es donde se guardarán las diferentes vistas:
     * **Twitter**: En esta vista tenemos la primera toma de contacto con la aplicación en donde se encuentran la tabla, la nube de tags y la gráfica de tweets.
 * **Components**: En este directorio es donde se guardan todos los componentes que se usarán en todas las vistas:
-    * **Grafica**: En este componente se encuentra la gráfica de cantidad de amigos y seguidores de los usuarios de los tweets.
-    * **NubeTags**: En este componente se encuentra la nube de tags de los tweets de la aplicación.
+    * **Grafica**: En este componente se encuentra la gráfica de cantidad de amigos y seguidores de los Usuarios de los tweets.
+    * **NubeTags**: En este componente se encuentra la nube de tags con los nombres de Usuarios de los tweets de la aplicación.
     * **Tabla**: En este componente se muestran los datos de los tweets de la aplicación.
 * **img**: En este directorio se guardan todas las imágenes que se usan para la aplicación y para el readme.
 ***
