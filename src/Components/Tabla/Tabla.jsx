@@ -7,7 +7,7 @@ import Table from 'react-bootstrap/Table';
 const Tabla = () => {
 
     const [tweets, setTweets] = useState([]);
-    const [msgError, setMsgError] = useState('Error al cargar los tweets');
+    const [msgError, setMsgError] = useState('');
 
     useEffect(() => {
         traerTweets();
@@ -27,28 +27,32 @@ const Tabla = () => {
     };
 
     return (
-        <div className="tabla">
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Usuario</th>
-                        <th>Tweet</th>
-                        <th>Fecha</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tweets.map(tweet => (
-                        <tr key={tweet.id}>
-                            <td>{tweet.id}</td>
-                            <td>{tweet.user.name}</td>
-                            <td>{tweet.user.description}</td>
-                            <td>{tweet.created_at}</td>
+        <div className="componenteTabla">
+            <div className='tabla'>
+                <Table style={{}} striped responsive hover variant="dark">
+                    <thead>
+                        <tr>
+                            <th>ID del Tweet</th>
+                            <th>Usuario</th>
+                            <th>Tweet</th>
+                            <th>Localidad</th>
+                            <th>Fecha</th>
                         </tr>
-                    ))}
-                </tbody>
-            </Table>
-            {msgError}
+                    </thead>
+                    <tbody style={{ color: '#fff'}}>
+                            {tweets.map(tweet => (
+                                <tr key={tweet.id}>
+                                    <td>{tweet.id}</td>
+                                    <td>{tweet.user.name}</td>
+                                    <td>{tweet.user.description}</td>
+                                    <td>{tweet.user.location}</td>
+                                    <td>{tweet.created_at}</td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </Table>
+                {msgError}
+            </div>
         </div>
     )
 
