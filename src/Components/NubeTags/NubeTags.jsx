@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { baseURL } from '../../utiles';
 
+
 const NubeTags = () => {
     
     const [tweets, setTweets] = useState([]);
@@ -29,14 +30,14 @@ const NubeTags = () => {
 
     data = tweets.map((tweet) => {
         return {
-            key: Math.random(),
+            key: tweet.id,
             value: tweet.user.name,
             count: minMaxRoundedRandom(18, 58)
         };
     });
 
-    const customRenderer = (tag) => {
-        tag.map((tag) => {
+    const customRenderer = (datos) => {
+        datos.map((tag) => {
             return (
                 <div key={tag.value}>
                     {tag.value}
@@ -47,7 +48,7 @@ const NubeTags = () => {
 
     return (
         <div className='componenteNubeTags'>
-            <TagCloud tags={data} minSize={10} maxSize={20} renderer={customRenderer(data)} />
+            <TagCloud tags={data} minSize={15} maxSize={20} renderer={customRenderer(data)} />
             {msgError}
         </div>
     );

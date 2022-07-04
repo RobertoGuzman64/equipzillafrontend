@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     height: 30em;
-    width: 50em;
+    width: 70em;
 }
 
 .tag-cloud-tag{
@@ -22,6 +22,6 @@
 }
 
 .tag-cloud-tag:hover{
-    transform: scale(1.9);
+    transform: scale(1.5);
     margin: 10%;
 }
